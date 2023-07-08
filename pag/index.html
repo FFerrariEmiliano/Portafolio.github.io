@@ -1,0 +1,168 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="menu-de-barras.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+  <script type="text/javascript">
+  emailjs.init('wOz-WlR4JzhWj2kYD')
+  </script>
+  <title>Portafolio</title>
+</head>
+<body>
+
+  <div id="loader"></div>
+  <div id="content" style="display: none;"></div>
+    
+    <!-- <div id="particles-js"></div> -->
+    
+    <nav id="barra-nav">
+
+      <div style="transform: rotate(0deg);" id="cont-barras">
+        <ul  id="lista-barras">
+          <div style="width: 40px; margin: 3px auto; transform: rotateY('0deg');" id="barra-1"></div>
+          <div style="width: 40px; margin: 3px auto; transform: rotateY('0deg');" id="barra-2"><div style="opacity: 0;" id="barra-3"></div></div>
+          <div style="width: 40px; margin: 3px auto; transform: rotateY('0deg');" id="barra-4"></div>
+        </ul>
+      </div>
+      
+      <ul id="ul__nav-primario">
+        <div id="nav">
+          <li><a href="#top">Inicio <hr></a></li>
+          <li><a href="#introduccion-hr">Conocimientos <hr></a></li>
+          <li><a href="#form-span">Contacto <hr></a></li>
+        </div>
+        <div id="redes">
+          <li class="redes__li"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li class="redes__li"><a href="#"><i class="fa-brands fa-github"></i></a></li>
+        </div>
+      </ul>
+
+    </nav>
+
+    <div id="nav-secundario" style="left: -35%;">
+      <ul>
+        <li><a href="#top">Inicio <hr></a></li>
+        <li><a href="#introduccion-hr">Conocimientos <hr></a></li>
+        <li><a href="#form-span">Contacto <hr></a></li>
+      </ul>
+    </div>
+    
+    <div id="portafolio">
+      
+      <div id="presentacion"> 
+        <h1><p id="p__presentacion">Hola, soy</p><b>F</b>elipe <b>F</b>errari</h1>
+        <img id="perfil" src="https://yt3.googleusercontent.com/BghvkMOlDOYA6uqo9trTlk5Eoth75M4C4ukYSjz0gvMrg8PEGgtlUrDSCiuW9BYkaLJefoyc1Q=s900-c-k-c0x00ffffff-no-rj" alt="Felipe Ferrari">
+        <p id="sobremi">Un desarrollador web principiante con conocimientos en <b>HTML</b>, <b>CSS</b> y un poco de <b>JavaScript</b>.<br> Me encargo de hacer tu página web, y estoy constantemente aprendiendo y mejorando mis habilidades en desarrollo web.</p>
+      </div>
+      
+      <a href="#introduccion-hr">
+        <div id="flecha">
+          <img id="introduccion-hr" src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.bdtrans.es/wp-content/uploads/home/scroll-arrow.gif" alt="Seguir bajando">
+        </div>
+      </a>
+
+      <hr class="separadores">
+
+      <p id="introduccion">Estos son algunos de mis conocimientos.</p>
+
+      <div id="tecnologias">
+        <div>
+          <img class="logo" src="../imagenes/html.png" alt="HTML">
+          <!-- <p>HTML es el lenguaje utilizado para crear y estructurar el contenido de una página web.</p> -->
+        </div>
+
+        <div>
+          <img class="logo" src="../imagenes/css.png" alt="CSS">
+          <!-- <p>CSS es un lenguaje utilizado para definir el estilo y la apariencia visual de una página web.</p> -->
+        </div>
+
+        <div>
+          <img class="logo" src="../imagenes/git.png" alt="git">
+          <!-- <p>Con Git, podés guardar y mantener un registro completo de todas las modificaciones realizadas en el código.</p> -->
+        </div>
+
+        <div>
+          <img class="logo" src="../imagenes/javaScript.png" alt="JS">
+          <!-- <p>JavaScript es un lenguaje de programación que se utiliza para agregar interactividad y funcionalidad a una página web.</p> -->
+        </div>
+      </div>
+
+      <hr>
+
+      <h2>ESTOS SON ALGUNOS DE LOS PROYECTOS QUE ESTOY REALIZANDO CON LA AYUDA DE LAS TECNOLOGÍAS QUE MOSTRÉ ANTERIORMENTE</h2>
+
+      <div class="galeria">
+
+        <div class="imagen">
+          <img src="../imagenes/Juegos.png" alt="">
+          <div class="overlay">
+            <a href=""><i class="fa-solid fa-link"></i></a>
+            <div style="transform: translateY(200px);" id="mostrar-info" class="div1">
+              <img class="img__mostrar-info" src="../imagenes/flechaArriba.png" alt="">
+              <p>Una página que trata sobre videojuegos, responsiva y atractiva.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="../imagenes/Restaurant.png" alt="">
+          <div class="overlay">
+            <a href=""><i class="fa-solid fa-link"></i></a>
+            <div style="transform: translateY(200px);" id="mostrar-info" class="div2">
+              <img class="img__mostrar-info" src="../imagenes/flechaArriba.png" alt="">
+              <p>acá vas a poder ver que hay bastante contenido para mostrar muchas cosas de manera llamativa.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="../imagenes/Proud.png" alt="">
+          <div class="overlay">
+            <a href=""><i class="fa-solid fa-link"></i></a>
+            <div style="transform: translateY(200px);" id="mostrar-info" class="div3">
+              <img class="img__mostrar-info" src="../imagenes/flechaArriba.png" alt="">
+              <p>Una página de una pastelería ficticia con muchas interactividades e imagenes para exponer en carruseles y más.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="form-span"></div>
+
+      <div id="contactar">
+
+        <div id="datos">
+          <h3>Mis datos de contacto</h3>
+          <ul id="datos__ul">
+          <i class="fa-solid fa-user"></i><li>Nombre <p>Felipe Ferrari</p></li>
+          <i class="fa-sharp fa-solid fa-location-dot"></i><li>Ubicación <p>Luján - Buenos Aires</p></li>
+          <i class="fa-solid fa-envelope"></i><li>Email <p>felipeferrari285@gmail.com</p></li>
+          <i class="fa-solid fa-phone"></i><li>Número <p>+54 6860-5342</p></li>
+          </ul>
+        </div>
+
+      
+        <form id="form">
+          <h3>Tambien podés enviarme un mail llenando este formulario</h3>
+          <div class="field">
+            <label  for="from_name"></label>
+            <input required placeholder="Tu nombre" type="text" name="from_name" id="from_name">
+          </div>
+          <div class="field">
+            <label for="message"></label>
+            <div id="email-adv"><input required placeholder="Mail" type="email" name="email_id" id="email_id"><p id="aviso">Asegurate que tu mail sea correcto antes de enviarlo</p></div>
+          </div>
+          <div class="field">
+            <label for="email_id"></label>
+            <textarea aria-controls="none" placeholder="Mensaje" name="message" id="message"></textarea>
+          </div>
+          
+          <input type="submit" id="button" value="Enviar Email" >
+        </form>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/fe6ac2c5e5.js" crossorigin="anonymous"></script>
+</body>
+</html>
