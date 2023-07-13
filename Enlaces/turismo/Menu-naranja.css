@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.body{
+  padding: 0;
+  position: relative;
+  top: 90px;
+}
+
+.nav{
+  background: #008caf;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  font-family: tahoma;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 1000000;
+}
+
+.ul{
+  padding: 20px;
+  display: inline-block;
+  margin-top: -5px;
+}
+
+.li-menu{
+  display: inline-block;
+  font-weight: 300;
+  font-size: 20px;
+  color: #fff;
+  transition: all .5s;
+}
+
+.a-menu{
+  color: #fff;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.a-menu:hover{
+  color: #dfdfdf;
+  border-radius: 5px;
+}
+/* redes */
+.li-redes{
+  display: inline-block;
+}
+.a-redes{
+  padding: 0 5px;
+}
+.i-redes{
+  color: #fff;
+}
+.redes{
+  float: right;
+  display: inline-block;
+  margin-top: 10px;
+}
+#tw{
+  font-size: 30px;
+}
+#tw:hover{
+  color: #0df;
+}
+#fc{
+  font-size: 30px;
+}
+#fc:hover{
+  color: #513ace;
+  background-color: #fff;
+  border-radius: 50%;
+}
+#ig{font-size: 30px;
+}
+#ig:hover{
+  color: #9f07e6;
+}
+/* redes- */
+
+.barras{
+  font-size: 30px;
+  display: inline-block;
+  color: #fff;
+  float: left;
+  margin: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+.ul-resp{
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .ul{padding: 20px 0;}
+  .li-menu i{font-size: 18px;}
+  .a-menu{font-size: 18px;}
+  .redes{margin: 15px 0 0 0;}
+  #tw{font-size: 23px;}
+  #fc{font-size: 23px;}
+  #ig{font-size: 23px;}
+}
+
+@media only screen and (max-width:450px) {
+  .a-menu{font-size: 15px;}
+  .redes{margin-top: -5px;}
+  .li-redes{display: block; padding-top:3px;}
+  #tw{font-size: 19px;}
+  #fc{font-size: 19px;}
+  #ig{font-size: 19px;}
+}
+
+@media only screen and (max-width:430px) {
+
+  .ul{display: none;}
+  .ul-resp{display: block; position: absolute; top: 50px; left: -120px; padding: 0 13px; background-color: #008caf; height: 120vh; transition: all .5s;}
+  .li-menu-resp{color: #fff; padding-top: 10px; text-transform: uppercase;}
+  .a-menu-resp{color: #fff;}
+  .li-menu-resp i{padding-right: 3px;}
+  .barras{display: inline-block;}
+  #check:checked~.ul-resp{left: 0;}
+}
