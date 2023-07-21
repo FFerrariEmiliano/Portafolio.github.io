@@ -127,6 +127,10 @@ nav #ul__nav-primario div:not(.barras, .cont-barras) {
   justify-content: space-between;
 }
 
+#nav-secundario {
+  display: none;
+}
+
 li {
   margin: 0 10px;
 }
@@ -196,7 +200,7 @@ h1 {
   letter-spacing: 5px;
   font-size: 40px;
   display: inline-block;
-  margin:0 20px;
+  margin:0 30px;
   transition: all .4s;
   text-shadow: 0 0 30px #cbcbcba1;
 }
@@ -211,7 +215,7 @@ h1 b {
 }
 
 #perfil {
-  margin: 0 20px;
+  margin: 0 30px;
   grid-area: foto;
   border-radius: 50%;
   width: 30%;
@@ -301,10 +305,13 @@ h2 {
 
 .galeria .imagen {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   cursor: default;
   margin: 10px;
-  box-shadow:0 0 90px #ffffff3e;;
+  box-shadow:0 0 90px #ffffff3e;
 }
 
 .galeria .imagen img {
@@ -375,199 +382,92 @@ h2 {
   color: #000;
 }
 
-#form-span {
-  height: 0px;
-  position: relative;
-  opacity: 0;
-  padding-top: 90px;
-}
-
-#contactar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-around;
-  background-color: #ffffff3e;
-}
-
 #datos {
-  width: 300px;
-}
-
-#contactar h3 {
-  text-decoration: underline;
-  margin: 0;
-  margin-top: 30px;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 700;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#contactar #form h3 {
-  margin: 0 0 10px 0;
-  width: 600px;
-  text-align: center;
-}
-
-#datos__ul {
-  display: grid;
-  grid-template-columns: 50px 2fr;
-  font-size: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-#datos__ul li {
-  margin: 10px 0;
-}
-
-#datos__ul i {
-  color: #00b5a5;
-  justify-self: center;
-  align-self: center;
-  font-size: 25.5px;
-}
-
-#datos__ul li p {
-  margin: 5px 0;
-  padding: 0;
-  font-size: 15px;
-  color: #ddd;
-}
-
-#form {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 500px;
-  margin-top: 30px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.field {
+#datos h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+#datos__ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: .75fr .75fr;
+  justify-items: center;
+  padding: 0;
+}
+
+#datos__ul div {
+  width: 300px;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr;
+  border:2px solid #ccf;
+  padding: 10px;
+  margin: 20px;
+}
+
+#datos__ul div i {
+  font-size: 25px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+#datos__ul div li {
+  font-size: 20px;
+}
+
+#datos__ul div li p {
+  font-size: 15px;
+  color: #ccc;
+}
+
+#form/* , #email-adv */ {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  align-items: center;
+  gap: 10px;
 }
 
-label {
+#form h3 {
+  font-size: 30px;
+  margin: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  margin-bottom: 5px;
 }
 
-input[type="text"] {
+input {
+  min-width: 340px;
+  max-width: 50vw;
+  font-size: 20px;
+  background:linear-gradient(to top, transparent, #00b5a522);
   color: #fff;
-  width: 600px;
-  height: 50px;
-  font-size: 22px;
-  padding: 7px;
-  border-radius: 4px;
   outline: none;
-  background-color: #00908477;
   border: none;
-  box-shadow: 0 0 10px #00696188;
-}
-
-#email-adv {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 600px;
-  justify-content: space-between;
-}
-
-#aviso {
-  text-align: center;
-  min-width: 275px;
-  margin: 0px;
-  box-sizing: border-box;
-}
-
-input[type="email"] {
-  color: #fff;
-  min-width: 325px;
-  height: 50px;
-  font-size: 22px;
-  padding: 7px;
-  border-radius: 4px;
-  outline: none;
-  background-color: #00908477;
-  border: none;
-  box-shadow: 0 0 10px #00696188;
+  padding:15px 10px;
+  font-family: monospace;
+  border-bottom: 2px solid #00b5a5;
 }
 
 textarea {
-  resize: none;
+  max-width: 50vw;
+  min-width: 340px;
+  max-height: 175px;
+  min-height: 175px;
+  background:linear-gradient(to top, transparent, #00b5a522);
   color: #fff;
-  width: 600px;
-  min-width: 300px;
-  max-width: 600px;
-  height: 200px;
-  max-height: 200px;
-  min-height: 200px;
-  font-size: 22px;
-  padding: 7px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   outline: none;
-  background-color: #00908477;
   border: none;
-  box-shadow: 0 0 10px #00696188;
-}
-
-/* Cambiar el estilo del scroll */
-textarea::-webkit-scrollbar {
-  width: 10px; /* Ancho del scroll */
-}
-
-textarea::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color del scroll thumb */
-  border-radius: 5px; /* Radio de borde del scroll thumb */
-}
-
-textarea::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Color del scroll thumb al pasar el cursor sobre él */
-}
-
-
-textarea::placeholder{
-  color: #fff;
-}
-
-input[type="email"]::placeholder{
-  color: #fff;
-}
-
-input[type="text"]::placeholder{
-  color: #fff;
-}
-
-#aviso {
-  font-family: 'Courier New', Courier, monospace;
-  color: #ffffff;
-}
-
-#button {
-  text-align: center;
-  font-size: 15px;
-  width: 100px;
-  height: 50px;
-  padding: 10px;
-  background-color: #00908477;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00696188;
-  text-shadow:0 0 5px #fff9;
-  transition: all .5s;
-}
-
-#button[value="Enviar Email"]{
-  text-align: center;
+  padding:15px 10px;
+  font-family: monospace;
+  border-bottom: 2px solid #00b5a5;
 }
 
 @media (max-width:1439px){
@@ -579,6 +479,14 @@ input[type="text"]::placeholder{
 @media (max-width:768px){
   #nav {
     display: none;
+  }
+}
+
+@media (max-width:750px){
+  #datos__ul div {
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
   }
 }
 
@@ -610,7 +518,24 @@ input[type="text"]::placeholder{
   }
 
   h2 {
-    line-height: 35px;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 30px;
     letter-spacing: 5px;
+  }
+
+}
+
+@media (max-width:360px){
+  #form input, #form textarea {
+    max-width: 275px;
+    min-width: 275px;
+  }
+}
+
+@media (max-width:450px){
+  #datos__ul {
+    flex-direction: column;
+    display: flex;
   }
 }

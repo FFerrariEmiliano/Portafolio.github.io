@@ -131,27 +131,35 @@
         <div id="datos">
           <h3>Mis datos de contacto</h3>
           <ul id="datos__ul">
-          <i class="fa-solid fa-user"></i><li>Nombre <p>Felipe Ferrari</p></li>
-          <i class="fa-sharp fa-solid fa-location-dot"></i><li>Ubicación <p>Luján - Buenos Aires</p></li>
-          <i class="fa-solid fa-envelope"></i><li>Email <p>felipeferrari285@gmail.com</p></li>
-          <i class="fa-solid fa-phone"></i><li>Número <p>+54 6860-5342</p></li>
+            <div>
+              <i class="fa-solid fa-user"></i><li>Nombre <p>Felipe Ferrari</p></li>
+            </div>
+            <div>
+              <i class="fa-sharp fa-solid fa-location-dot"></i><li>Ubicación <p>Luján - Buenos Aires</p></li>
+            </div>
+            <div>
+              <i class="fa-solid fa-envelope"></i><li>Email <p>felipeferrari285@gmail.com</p></li>
+            </div>
+            <div>
+              <i class="fa-solid fa-phone"></i><li>Número <p>+54 6860-5342</p></li>
+            </div>
           </ul>
         </div>
 
       
         <form id="form">
-          <h3>Tambien podés enviarme un mail llenando este formulario</h3>
+          <h3>También podés enviarme un mail llenando este formulario</h3>
           <div class="field">
             <label  for="from_name"></label>
             <input required placeholder="Tu nombre" type="text" name="from_name" id="from_name">
           </div>
           <div class="field">
             <label for="message"></label>
-            <div id="email-adv"><input required placeholder="Mail" type="email" name="email_id" id="email_id"><p id="aviso">Asegurate que tu mail sea correcto antes de enviarlo</p></div>
+            <div id="email-adv"><input required placeholder="Mail" type="email" name="email_id" id="email_id"></div>
           </div>
           <div class="field">
             <label for="email_id"></label>
-            <textarea aria-controls="none" placeholder="Mensaje" name="message" id="message"></textarea>
+            <textarea maxlength="380" aria-controls="none" placeholder="Mensaje" name="message" id="message"></textarea>
           </div>
           
           <input type="submit" id="button" value="Enviar Email" >
