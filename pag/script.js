@@ -35,24 +35,26 @@ ul.addEventListener("click", function() {
   }
 
   if (div2.style.width === "40px") {
-    div2.style.width = "3px";
     div2.style.margin = "0px auto";
     setTimeout(() => {
       div2.style.width = "40px";
       div2.style.margin = "3px auto";
     }, 300);
   } else {
-    div2.style.width = "3px";
     div2.style.margin = "3px auto";
-    setTimeout(() => {
-      div2.style.width = "3px";
-    }, 10);
   }
 
   if (div3.style.opacity == 0) {
     div3.style.opacity = 1
+    div3.style.transform = "rotate(90deg)"
+    div3.style.top = "-0px"
+    div3.style.left = "auto"
+
   } else if (div3.style.opacity == 1) {
     div3.style.opacity = 0
+    div3.style.transform = "rotate(0deg)"
+    div3.style.top = "-20px"
+    div3.style.left = "a0to"
   }
 
   if (div4.style.width === "40px") {
@@ -87,6 +89,27 @@ ul.addEventListener("click", function() {
 
 //mostrar proyectos
 
+verInfo1 = document.querySelector(".div1")
+verInfo2 = document.querySelector(".div2")
+verInfo3 = document.querySelector(".div3")
+
+verInfo1.addEventListener("click", function () {
+  if (verInfo1.style.transform == "translateY(200px)") {
+    verInfo1.style.transform = "translateY(0px)"
+  } else verInfo1.style.transform = "translateY(200px)"
+})
+
+verInfo2.addEventListener("click", function () {
+  if (verInfo2.style.transform == "translateY(200px)") {
+    verInfo2.style.transform = "translateY(0px)"
+  } else verInfo2.style.transform = "translateY(200px)"
+})
+
+verInfo3.addEventListener("click", function () {
+  if (verInfo3.style.transform == "translateY(200px)") {
+    verInfo3.style.transform = "translateY(0px)"
+  } else verInfo3.style.transform = "translateY(200px)"
+})
 
 //fin mostrar proyectos
 

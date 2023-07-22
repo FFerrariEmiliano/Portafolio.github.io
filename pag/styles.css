@@ -332,6 +332,18 @@ h2 {
   flex-direction: column;
 }
 
+.div1 {
+  transition: all .3s ease;
+}
+
+.div2 {
+  transition: all .3s ease;
+}
+
+.div3 {
+  transition: all .3s ease;
+}
+
 .imagen .overlay:hover {
   opacity: 1;
 }
@@ -391,7 +403,7 @@ h2 {
 }
 
 #datos {
-  width: 300px;
+  width: 600px;
 }
 
 #contactar h3 {
@@ -406,7 +418,7 @@ h2 {
 
 #contactar #form h3 {
   margin: 0 0 10px 0;
-  width: 600px;
+  width: 100%;
   text-align: center;
 }
 
@@ -573,6 +585,18 @@ input[type="text"]::placeholder{
 @media (max-width:1439px){
   #proyecto3 {
     margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width:1099px){
+  .datos__li {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .datos_li p {
+    justify-self: end;
   }
 }
 
