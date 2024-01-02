@@ -1,4 +1,9 @@
 @media (max-width:768px){
+  
+  #portafolio {
+    margin: 50px 0;
+  }
+
   #ul__nav-primario {
     display: none;
   }
@@ -57,16 +62,17 @@
   }
 
   #nav-secundario {
-    width: 35%;
+    width: 45%;
     top: 57px;
-    left: -35%;
+    left: -45%;
     position: fixed;
     background-color: #001c12ba;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     z-index: 999999999999;
     transition: all .3s ease;
     backdrop-filter: blur(8px); 
+    height: 100vh;
   }
   
   #nav-secundario ul {

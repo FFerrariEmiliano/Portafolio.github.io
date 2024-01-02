@@ -9,7 +9,7 @@ window.addEventListener("load", function() {
   let display = setTimeout(()=>{
      loader.style.display = "none"
      clearTimeout(display)}, 1000)
-  
+  console.log("la pagina cargó correctamente");
 });
 
 
@@ -35,18 +35,10 @@ ul.addEventListener("click", function() {
   }
 
   if (div2.style.width === "40px") {
-    div2.style.width = "3px";
-    div2.style.margin = "0px auto";
-    setTimeout(() => {
-      div2.style.width = "40px";
-      div2.style.margin = "3px auto";
-    }, 300);
+    div2.style.margin = "3px auto";
   } else {
     div2.style.width = "3px";
     div2.style.margin = "3px auto";
-    setTimeout(() => {
-      div2.style.width = "3px";
-    }, 10);
   }
 
   if (div3.style.opacity == 0) {
@@ -75,10 +67,10 @@ ul.addEventListener("click", function() {
 
   const navSecundario = document.querySelector("#nav-secundario")
 
-  if (navSecundario.style.left == "-35%") {
+  if (navSecundario.style.left == "-45%") {
     navSecundario.style.left = "0%"
   } else if (navSecundario.style.left == "0%"){
-    navSecundario.style.left = "-35%"
+    navSecundario.style.left = "-45%"
   }
 });
 
@@ -87,6 +79,28 @@ ul.addEventListener("click", function() {
 
 //mostrar proyectos
 
+function mostrar(event) {
+  var elemento = event.target;
+  var divImg = elemento.parentElement;
+
+  if (divImg.classList.contains("mostrar")) {
+    divImg.classList.remove("mostrar")
+    divImg.classList.add("ocultar")
+  } else {
+    divImg.classList.add("mostrar")
+    divImg.classList.remove("ocultar")
+  }
+
+  if (elemento.style.transform == "rotateX(180deg)") {
+    elemento.style.transform = "rotateX(0deg)"
+  } else {
+    elemento.style.transform = "rotateX(180deg)"
+  }
+}
+
+const overlay1 = document.querySelector(".img-1").addEventListener("click", mostrar)
+const overlay2 = document.querySelector(".img-2").addEventListener("click", mostrar)
+const overlay3 = document.querySelector(".img-3").addEventListener("click", mostrar)
 
 //fin mostrar proyectos
 
@@ -97,8 +111,7 @@ const inputNombre = document.getElementById("from_name")
 const inputMensaje = document.getElementById("message")
 const inputEmail = document.getElementById("email_id")
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
+document.getElementById('form').addEventListener('submit', function(event) {
    event.preventDefault();
 
    btn.value = 'Enviando...';

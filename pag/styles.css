@@ -16,7 +16,7 @@ html {
   transition: all .5s;
   z-index: 9999999999999999999999;
   top: 0;
-  background: radial-gradient(circle,#004f55  0%,#040036  100%), url('ruta-de-la-imagen.jpg');
+  background: radial-gradient(circle,#004f55  0%,#040036  100%);
   background-size: cover;
   background-position: center;
 }
@@ -47,7 +47,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #040036;
-  background: radial-gradient(circle,#003e42  0%,#040036  100%), url('ruta-de-la-imagen.jpg');
+  background: radial-gradient(circle,#003e42  0%,#040036  100%);
   background-size: cover;
   background-position: center;
 }
@@ -100,10 +100,6 @@ nav #ul__nav-primario div:not(.barras, .cont-barras) {
   justify-content: space-between;
 }
 
-#nav-secundario {
-  display: none;
-}
-
 li {
   margin: 0 10px;
 }
@@ -114,17 +110,34 @@ li a {
 }
 
 li a hr {
-  margin: 0;
+  margin: auto;
   padding: 0;
   opacity: 0;
-  width: 0;
-  transition:all .3s ease;
+  width: 10px;
   
 }
 
 li a:hover hr {
   opacity: 1;
-  width: 100%;
+  animation: alargar .5s forwards;
+}
+
+@keyframes alargar {
+  0% {
+    width: 0px;
+  }
+  25% {
+    width: 100%;
+  }
+  50% {
+    width: 90%;
+  }
+  75% {
+    width: 97%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 
@@ -187,13 +200,70 @@ h1 b {
   font-size: 45px;
 }
 
+#cont-perfil {
+  position: relative;
+  width: 30%;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+#pc-perfil {
+  width: 80px;
+  position: absolute;
+  left:30px;
+  bottom: -20px;
+  animation: moverse1 10s 0s infinite ease;
+}
+
+#code-perfil {
+  width: 80px;
+  position: absolute;
+  left:260px;
+  bottom: 200px;
+  animation: moverse2 10s 1s infinite ease;
+}
+
+@keyframes moverse1 {
+  0% {
+    transform:scale(1.2) rotateZ(-10deg);
+    bottom:-2%;
+  }
+
+  50% {
+    transform:scale(1.2) rotateZ(10deg);
+    bottom:-5%;
+  }
+
+  100% {
+    transform:scale(1.2) rotateZ(-10deg);
+    bottom:-2%;
+  }
+}
+
+@keyframes moverse2 {
+  0% {
+    transform:scale(1.2) rotateZ(-10deg);
+    bottom:-2%;
+  }
+
+  50% {
+    transform:scale(1.2) rotateZ(10deg);
+    bottom:-5%;
+  }
+
+  100% {
+    transform:scale(1.2) rotateZ(-10deg);
+    bottom:-2%;
+  }
+}
+
 #perfil {
   margin: 0 30px;
   grid-area: foto;
   border-radius: 50%;
   width: 30%;
-  max-width: 300px;
-  min-width: 200px;
+  max-width: 400px;
+  min-width: 300px;
 }
 
 #sobremi {
@@ -430,7 +500,7 @@ input {
 }
 
 textarea {
-  max-width: 50vw;
+  max-width: 340px;
   min-width: 340px;
   max-height: 175px;
   min-height: 175px;
@@ -451,6 +521,21 @@ textarea {
 
 @media (max-width:768px){
   #nav {
+    display: none;
+  }
+
+  #tecnologias div {
+    margin: 10px 0;
+  }
+
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width:769px){
+  #nav-secundario {
     display: none;
   }
 }
@@ -486,8 +571,8 @@ textarea {
   }
 
   #perfil{
-    margin: 10px;
-    justify-self: center;
+    margin:10px auto;
+    display: block;
   }
 
   h2 {
@@ -499,16 +584,20 @@ textarea {
 
 }
 
-@media (max-width:360px){
-  #form input, #form textarea {
-    max-width: 275px;
-    min-width: 275px;
-  }
-}
-
 @media (max-width:450px){
   #datos__ul {
     flex-direction: column;
     display: flex;
+  }
+
+  #sobremi{
+    padding:0 20px;
+  }
+}
+
+@media (max-width:360px){
+  #form input, #form textarea {
+    max-width: 275px;
+    min-width: 275px;
   }
 }

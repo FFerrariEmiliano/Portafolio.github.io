@@ -4,10 +4,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="menu-de-barras.css">
+  <link rel="stylesheet" href="overlay.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
   <script type="text/javascript">
   emailjs.init('wOz-WlR4JzhWj2kYD')
   </script>
+  <meta name="description" content="Portafolio Felipe Emiliano Ferrari">
   <title>Portafolio</title>
 </head>
 <body>
@@ -35,7 +37,7 @@
       </ul>
     </nav>
 
-    <div id="nav-secundario" style="left: -35%;">
+    <div id="nav-secundario" style="left:-45%;">
       <ul>
         <li><a href="#top">Inicio <hr></a></li>
         <li><a href="#introduccion-hr">Conocimientos <hr></a></li>
@@ -47,7 +49,11 @@
       
       <div id="presentacion"> 
         <h1><p id="p__presentacion">Hola, soy</p><b>F</b>elipe <b>F</b>errari</h1>
-        <img id="perfil" src="https://yt3.googleusercontent.com/BghvkMOlDOYA6uqo9trTlk5Eoth75M4C4ukYSjz0gvMrg8PEGgtlUrDSCiuW9BYkaLJefoyc1Q=s900-c-k-c0x00ffffff-no-rj" alt="Felipe Ferrari">
+        <div class="cont-perfil">
+<!--           <img id="pc-perfil" src="../imagenes/programming_6062646.png" alt="">
+          <img id="code-perfil" src="../imagenes/coding_1652216.png" alt=""> -->
+          <img id="perfil" src="https://yt3.googleusercontent.com/BghvkMOlDOYA6uqo9trTlk5Eoth75M4C4ukYSjz0gvMrg8PEGgtlUrDSCiuW9BYkaLJefoyc1Q=s900-c-k-c0x00ffffff-no-rj" alt="Felipe Ferrari">
+        </div>
         <p id="sobremi">Un desarrollador web principiante con conocimientos en <b>HTML</b>, <b>CSS</b> y un poco de <b>JavaScript</b>.<br> Me encargo de hacer tu página web, y estoy constantemente aprendiendo y mejorando mis habilidades en desarrollo web.</p>
       </div>
       
@@ -92,31 +98,31 @@
         <div class="imagen">
           <img src="../imagenes/Juegos.png" alt="">
           <div class="overlay">
-            <a href=""><i class="fa-solid fa-link"></i></a>
-            <div style="transform: translateY(200px);" id="mostrar-info" class="div1">
-              <img class="img__mostrar-info" src="../imagenes/flechaArriba.png" alt="">
+            <a href="../Enlaces/Fe1.4/index.html"><i class="fa-solid fa-link"></i></a>
+            <div id="mostrar-info" class="ocultar">
+              <img class="img__mostrar-info img-1" src="../imagenes/flechaArriba.png" alt="">
               <p>Una página que trata sobre videojuegos, responsiva y atractiva.</p>
             </div>
           </div>
         </div>
 
-        <div class="imagen">
+        <!-- <div class="imagen">
           <img src="../imagenes/Restaurant.png" alt="">
           <div class="overlay">
             <a href=""><i class="fa-solid fa-link"></i></a>
-            <div style="transform: translateY(200px);" id="mostrar-info" class="div2">
-              <img class="img__mostrar-info" src="../imagenes/flechaArriba.png" alt="">
+            <div id="mostrar-info" class="ocultar">
+              <img class="img__mostrar-info img-2" src="../imagenes/flechaArriba.png" alt="">
               <p>acá vas a poder ver que hay bastante contenido para mostrar muchas cosas de manera llamativa.</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="imagen">
-          <img src="../imagenes/Proud.png" alt="">
+          <img src="../imagenes/coffee.png" alt="">
           <div class="overlay">
-            <a href=""><i class="fa-solid fa-link"></i></a>
-            <div style="transform: translateY(200px);" id="mostrar-info" class="div3">
-              <img class="img__mostrar-info" src="../imagenes/flechaArriba.png" alt="">
+            <a href="../Enlaces/Proud/index.html"><i class="fa-solid fa-link"></i></a>
+            <div id="mostrar-info" class="ocultar">
+              <img class="img__mostrar-info img-3" src="../imagenes/flechaArriba.png" alt="">
               <p>Una página de una pastelería ficticia con muchas interactividades e imagenes para exponer en carruseles y más.</p>
             </div>
           </div>
@@ -141,7 +147,7 @@
               <i class="fa-solid fa-envelope"></i><li>Email <p>felipeferrari285@gmail.com</p></li>
             </div>
             <div>
-              <i class="fa-solid fa-phone"></i><li>Número <p>+54 6860-5342</p></li>
+              <i class="fa-solid fa-phone"></i><li>Número <p>+54 11 6860-5342</p></li>
             </div>
           </ul>
         </div>
