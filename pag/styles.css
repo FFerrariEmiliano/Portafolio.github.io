@@ -260,7 +260,10 @@ h1 b {
 #perfil {
   margin: 0 30px;
   grid-area: foto;
-  border-radius: 50%;
+  clip-path: circle(50% at 50% 50%);
+  border-top: 6px solid #00b5a5;
+  border-bottom: 6px solid #00b5a5;
+  box-shadow: 0 0 0 30px #00b5a5;
   width: 30%;
   max-width: 400px;
   min-width: 300px;
