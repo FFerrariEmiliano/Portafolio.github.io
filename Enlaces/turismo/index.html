@@ -1,0 +1,85 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Menu-naranja.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+  <!-- <script src="codigo.js"></script> -->
+  
+  <script src="https://kit.fontawesome.com/fe6ac2c5e5.js" crossorigin="anonymous"></script>
+  <title>Páginas</title>
+</head>
+<body class="body">
+  <script src="arrays.js"></script>
+  <nav class="nav">
+    <input type="checkbox" id="check">
+    <label class="barras" for="check"><i class="fas fa-bars"></i></label>
+    <ul class="ul">
+      <li class="li-menu"><i class="fas fa-home"></i><a id="inicio" class="a-menu" href="#">Inicio</a></li>
+      <li class="li-menu"><i class="fas fa-user"></i><a class="a-menu" href="#">Sobre Mí</a></li>
+      <li class="li-menu"><i class="fas fa-circle-question"></i><a class="a-menu" href="#">Ayuda</a></li>
+    </ul>
+    <ul class="redes">
+      <li class="li-redes"><a class="a-redes" href=""><i id="ig" class="i-redes fa-brands fa-instagram"></i></a></li>
+      <li class="li-redes"><a class="a-redes" href=""><i id="fc" class="i-redes fa-brands fa-facebook"></i></a></li>
+      <li class="li-redes"><a class="a-redes" href=""><i id="tw" class="i-redes fa-brands fa-twitter"></i></a></li>
+    </ul>
+    <ul class="ul-resp">
+      <li class="li-menu-resp"><i class="fas fa-home"></i><a class="a-menu-resp" href="">Inicio</a></li>
+      <li class="li-menu-resp"><i class="fas fa-user"></i><a class="a-menu-resp" href="">Sobre Mí</a></li>
+      <li class="li-menu-resp"><i class="fas fa-circle-question"></i><a class="a-menu-resp" href="">Ayuda</a></li>
+    </ul>
+  </nav>
+  <div id="articulo">
+  <header>
+  <h1>Los Lugares Turísticos de Argentina</h1>
+    <p>Argentina cuenta con una variedad enorme de lugares turísticos, los cuales sobresalen por muchas razones, ya sea su cultura, su paisaje, su tranquilidad, pero sobre todo en estos lugares se la pasa muy bien, lo que los vuelve lugares inolvidables para el turista. </p>
+    <p>A continuación verás una lista con unas recomendaciones de a que lugares ir si tienes pensado viajar por Argentina.<br>Espero que disfrutes leer esto tanto como viajar por este país</p>
+  </header>
+  <section>
+  <h2>¿Qué tipos de lugares puedo visitar en este país?</h2>
+  <p>Aquí podras encotrar una gran variedad de paisajes naturales, ya que Argentina, abarca un gran territorio, contando con muchas diferencias entre un lugar y otro.<br>Aqui también tendrás la posibilidad de encontrar ciudades muy bellas como la capital del pais. Estas ciudades se caracterizan mucho por su gran arquitectura la cual atrae a muchos diariamente.</p><br>
+  <hr>
+  </section>
+  <section>  
+    <p>Comenzando con la lista tenemos una localidad situada en la base de un serro en la provincia de Jujuy en el noroeste.</p>
+    <div class="lado1">
+    <h3>Purmamarca</h3> 
+    <input id="mostrar-purm" type="checkbox"><label id="label-purm" for="mostrar-purm">Mostrar mapa de la región <i class="fa-solid fa-caret-down"></i></label>
+    <div class="mapa-purm">
+      <p class="cargar">Cargando...</p>
+    <iframe class="mapa-ifr" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14608.019697849984!2d-65.51007816963885!3d-23.747203803453484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b49ca833a1183%3A0x9d3ebf375117fa08!2sPurmamarca%2C%20Jujuy!5e0!3m2!1ses!2sar!4v1679093262835!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+    </div>
+    <p class="p-lugar">El entorno de esta localidad es fascinante, es un pueblo extremadamente pintoresco rodeado de sierras multicolor, con un paisaje desertico.
+    Los habitantes gozan de un estilo de vida bastante tranquilo, un particular estilo arquitectonico del pueblo y las bellezas naturales del entorno, cómo lo es el <a class="regiones" href="#">Cerro de los siete colores</a>.<br>
+    <div class="img-region">
+      <img src="https://www.lugaresturisticosdeargentina.com/wp-content/uploads/2017/02/cerro-de-los-siete-colores-jujuy.jpg" alt="Serro de los Siete Colores">
+      <p class="img-region">Serro de los Siete Colores - Jujuy</p>
+    </div>
+    <p>Es común hallar ventas de artesanías, confecciones y lo mas importante, los tours a las regiones cercanas, principalmente las <a class="regiones" href="#">Salinas Grandes</a> o la Laguna de <a class="regiones" href="#">Guayatayoc</a></p>
+  </div>
+</section>
+  <hr>
+  <section>
+    <p>En el segundo lugar de la lista, nos vamos hacia el Sur del país, a Tierra del Fuego a la Ciudad de Ushuaia también apodada "Fin del Mundo"</p>
+    <h3>Ushuaia</h3>
+      <input id="mostrar-ushuaia" type="checkbox"><label id="label-ushuaia" for="mostrar-ushuaia">Mostrar mapa de la región <i class="fa-solid fa-caret-down"></i></label>
+      <div class="mapa-ushuaia">
+        <p class="cargar">Cargando...</p>
+        <iframe class="mapa-ifr" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73583.06616292159!2d-68.37284281193334!3d-54.806842987571116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c22b5bad109bf%3A0x5498473dba43ebfc!2sUshuaia%2C%20Tierra%20del%20Fuego!5e0!3m2!1ses!2sar!4v1679717245584!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="p-lugar ush">Rodededa de mar y cordilleras, una ciudad en la que la naturaleza es inmensa.<br>Quienes viven en este lugar saben que es muy tranquilo pero sobre todo frío, la temperatura media anual de Ushuaia es de 10 °C aproximadamente. <br>Si vas como turista es sumamente recomendable que visites el <a class="regiones" href="#">Glaciar martial</a> 7km al noroeste de la ciudad </p>
+      <img src="https://live.staticflickr.com/1593/25652795754_7946ce1fc8_b.jpg" alt="Glaciar martial">
+      <p class="img-region">Glaciar Martial - Tierra del Fuego</p>
+      <p>La principal fuente económica de Ushuaia es la pesca, y su gastronomía, también se basa en esta actividad, por lo que hallarás muy buenas comidas relacionadas a la pesca.</p>
+  </section>
+  <hr>
+  <section>
+  </section>
+    </div>
+</body>
+</html>

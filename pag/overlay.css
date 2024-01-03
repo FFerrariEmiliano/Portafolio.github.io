@@ -1,0 +1,17 @@
+/* codigo para mostrar los proyectos hechos */
+/* INICIO */
+.mostrar {
+    transform: translateY(0px);
+    transition: transform .3s ease;
+}
+
+.ocultar {
+    transform: translateY(200px);
+    transition: transform .3s ease;
+}
+
+#img-1, #img-2, #img-3 {
+    transform: rotateX(0deg);
+}
+
+/* FINAL */

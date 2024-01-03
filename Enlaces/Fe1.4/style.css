@@ -1,0 +1,255 @@
+* {
+  line-height: 1.5;/* esto sirve para cambiar el espacio vertical de las letras, se puede cambiar a partir de 1 hasta 2, 3, 4, etc. */
+}
+
+*::selection{
+  background-color: rgba(52, 145, 233, 0.616);
+  color: #fff;
+}
+
+body {
+  font-size: 13px;
+  background-color: #262a4f;
+  background-image: url(mountains-rock-graphics-pixels-wallpaper-thumb.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-attachment: fixed;
+  color: #fff;
+  margin: 0;/* esto dice margin cero porque los navegadores le ponen un margin predeterminado entonces lo saque */
+}
+
+ul{
+  list-style: none;
+}
+
+#header-ord{
+  position: fixed;/*  */
+  width: 100%;
+  top: 0px;
+  z-index: 50;
+}
+
+nav{
+  cursor: default ;
+  background:#303664 ;
+  padding: 10px;
+  border-radius: 0 0 50px 50px;
+  margin-top: 0;
+}
+
+.opc-menu{
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.opc-menu:hover> ul {
+  display: block;
+}
+
+.opc-menu__li{
+  color: #fff;
+  text-decoration: none;
+  padding:0 1%;
+
+}
+
+.opc-menu__li:hover{
+  background: linear-gradient(rgba(83, 90, 151, 0.377), #303664);/* hace un degradado de colores */
+}
+
+.cont-sub-versiones{
+  display: none;
+  position :absolute;
+  min-width: 70px;
+  padding: 0;
+
+}
+
+.Vers-a{
+  text-decoration: none;
+  color: #fff;
+  background-color: #303664;
+  display: block;
+  padding-left: 5px;
+}
+
+.Vers-a:hover{
+  background-color: #414777;
+}
+
+nav > li{
+  float: left;
+}
+
+.buscar{
+  display: inline;
+  border: none;
+  outline: none;
+  background: #5c66c0e0;
+  color: #fff;
+  border-radius: 20px;
+  width: 40%;
+  padding: .1% 10px;
+  font-size: 1.05em;
+}
+
+.buscar::placeholder{
+  color: #fff;
+  font-size: 1.05em;
+}
+
+#top-contenedor {
+  margin: 1%;
+  cursor: default ;
+  background:rgba(38, 42, 79, 0.8) ;
+  padding: 3%;
+  border-radius: 50px;
+  margin-top: 100px;
+}
+
+h1 {
+  text-align: center;  /* sirve para mover algo en el centro en relacion a la caja que lo contiene (normalmente es para centrar texto)  */
+  font-family: tahoma; /* cambia la tipografia */
+  margin: 0;
+  font-size: 2em;
+  text-shadow: 1px 2px #aaa;/* genera una sombra en el texto el primer valor es para el eje "X" y el segundo para el eje "Y" */
+}
+
+h3, h2, h1 {
+  font-family: tahoma;
+  text-decoration: underline;/* agrega una linea debajo del texto. Hay otros estilos de linea  */
+}
+
+h3{
+  font-size: 150%;
+  text-decoration: none;
+}
+
+#gba {
+  width:90%;/* ajusta el ancho del contenido */
+  max-width: 500px;/* limita el ancho (width) a 500px */
+  margin: 10px auto;
+  display: block;/* muy dificil de explicar xd */
+  
+}
+
+.curiosidades{
+  list-style: circle;
+}
+
+.curiosidades li {
+  padding: 5px 0;
+}
+
+li, p {
+  font-size: 120%;/* ajusta el tamaño de la fuente. El predeterminado es 100% */
+  line-height: 4vh;
+  padding: 0;
+}
+
+.titulos {
+  font-weight: 900; /* ajusta el grosor de la fuente sus valores van de 100 a 900 */
+  font-family: verdana;
+  position: relative;
+  font-size: 170%;
+  text-decoration: underline rgb(2, 183, 255) ;
+}
+/* tamaño y fuente de los titulos */
+#port-kirby{
+  float: left; 
+  width: 50%;
+  max-width: 250px;
+  position: relative;
+  margin: 0 10px;
+}
+/* posicionamiento de la portada de kirby */
+#kirby-gif{
+  float:right;
+  width: 50%;
+  max-width: 200px;
+  position: sticky;
+  margin: 0 10px;
+  border-radius: 3px;
+  transform: rotatey(180deg);/* rota la imagen en el eje y */
+}
+/* posicionamiento del gif de kirby */
+
+#port-pkm {
+  float: left;
+  width: 25vw;
+  min-width: 200px;
+  max-width: 350px;
+  position: relative;
+  margin: 0 10px;
+}
+
+#pkm-gif {
+  float:right;
+  width: 50%;
+  min-width: 200px;
+  max-width: 450px;
+  position: sticky;
+  margin: 0 10px;
+  border-radius: 3px;
+}
+
+#port-crash {
+  float: left;
+  width: 25vw;
+  max-width: 250px;
+  position: relative;
+  margin: 0 10px;
+}
+
+#crash-gif {
+  float:right;
+  width: 50%;
+  max-width: 250px;
+  position: sticky;
+  margin: 0 10px;
+  border-radius: 3px;
+}
+
+#header-resp{
+  display: none;
+}
+
+@media only screen and (max-width: 550px){
+  #header-ord{
+    display: none;
+  }
+
+  #header-resp-cont{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+
+  #header-resp{
+    display: block;
+    width: 100%;
+    background-color: #303664;
+    z-index: 500;
+  }
+
+  div i {
+    font-size: 30px;
+    padding: 5px;
+  }
+
+  #ul-resp{
+    padding: 5px;
+    position: absolute;
+    top: -200;
+    background-color: #303664;
+    transition: all .5s;
+    z-index: -1;
+  }
+
+  #header-resp:hover > #ul-resp{
+    top: 20px;
+  }
+
+}

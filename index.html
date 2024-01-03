@@ -2,119 +2,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-
+  <link rel="stylesheet" href="pag/styles.css">
+  <link rel="stylesheet" href="pag/menu-de-barras.css">
+  <link rel="stylesheet" href="pag/overlay.css">
+  <link rel="stylesheet" href="toast.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
   <script type="text/javascript">
-
-    emailjs.init('wOz-WlR4JzhWj2kYD')
+  emailjs.init('wOz-WlR4JzhWj2kYD')
   </script>
+  <meta name="description" content="Portafolio Felipe Emiliano Ferrari">
   <title>Portafolio</title>
 </head>
 <body>
   <div id="loader"></div>
-
-  <div id="particles-js"></div>
-
-  <nav>
-    <ul>
-      <div id="nav">
-        <li><a href="#top">Inicio</a></li>
-        <li><a href="#introduccion-hr">Conocimientos</a></li>
-        <li><a href="#form">Contacto</a></li>
+  <div id="content" style="display: none;"></div>
+    <nav id="barra-nav">
+      <div style="transform: rotate(0deg);" id="cont-barras">
+        <ul  id="lista-barras">
+          <div style="width: 40px; margin: 3px auto; transform: rotateY('0deg');" id="barra-1"></div>
+          <div style="width: 40px; margin: 3px auto; transform: rotateY('0deg');" id="barra-2"><div style="opacity: 0;" id="barra-3"></div></div>
+          <div style="width: 40px; margin: 3px auto; transform: rotateY('0deg');" id="barra-4"></div>
+        </ul>
       </div>
-      <div id="redes">
-        <li class="redes__li"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li class="redes__li"><a href="#"><i class="fa-brands fa-github"></i></a></li>
-      </div>
-    </ul>
-  </nav>
-
-  <div id="portafolio">
-    <div id="presentacion">
-      <h1>Soy <b>F</b>elipe <b>F</b>errari</h1>
-      <p id="sobremi">Un desarrollador web principiante con conocimientos en <b>HTML</b>, <b>CSS</b> y un poco de <b>JavaScript</b>.<br> Me encargo de hacer tu página web para tu negocio, y estoy constantemente aprendiendo y mejorando mis habilidades en desarrollo web.</p>
-    </div>
-
-    <div id="flecha">
-      <img id="introduccion-hr" src="imagenes/scroll-down.gif" alt="Seguir bajando">
-    </div>
-
-    <hr >
-
-    <p id="introduccion">Actualmente tengo conocimientos sólidos en HTML CCS y algo de experiencia en JavaScript.</p>
-
-    <div id="tecnologias">
-      <div class="cont-tecnologias">
-        <img class="logo" src="imagenes/html.png" alt="HTML">
-        <p>HTML es el lenguaje utilizado para crear y estructurar el contenido de una página web.</p>
-      </div>
-
-      <div>
-        <img class="logo" src="imagenes/css.png" alt="CSS">
-        <p>CSS es un lenguaje utilizado para definir el estilo y la apariencia visual de una página web.</p>
-      </div>
-
-      <div class="tecnologias__div">
-        <img class="logo" src="imagenes/javaScript.png" alt="JS">
-        <p>JavaScript es un lenguaje de programación que se utiliza para agregar interactividad y funcionalidad a una página web.</p>
-      </div>
-    </div>
-
-    <hr>
-
-    <h2>ESTOS SON ALGUNOS DE LOS PROYECTOS QUE ESTOY REALIZANDO CON LA AYUDA DE LAS TECNOLOGÍAS QUE MOSTRÉ ANTERIORMENTE</h2>
-
-    <div id="proyectos">
-      <div class="proyecto">
-        <p class="titulo">Restaurant</p>
-        <div class="imagen" id="link-img1">
-          <img id="portada-restaurant" src="imagenes/Restaurant.png" alt="Restaurante">
-        </div>
-        <p class="fecha-edicion">Última edición el 00/00/00</p>
-      </div>
-
-      <div class="proyecto">
-        <p class="titulo">Proud</p>
-        <div class="imagen" id="link-img2">
-          <img id="portada-proud" src="imagenes/Proud.png" alt="Pastelería Proud">
-        </div>
-        <p class="fecha-edicion">Última edición el 00/00/00</p>
-      </div>
-
-      <div class="proyecto">
-        <p class="titulo">Top De Juegos</p>
-        <div class="imagen" id="link-img3">
-          <img id="portada-juegos" src="imagenes/Juegos.png" alt="Top De juegos GBA">
-        </div>
-        <p class="fecha-edicion">Última edición el 00/00/00</p>
-      </div>
-    </div>
-
-    <div id="contactar">
-      <h3>Si te intersa lo que puedo hacer, contactame llenando este formulario.</h3>
-
-      <form id="form">
-        <div class="field">
-          <label  for="from_name"></label>
-          <input required placeholder="Tu nombre" type="text" name="from_name" id="from_name">
-        </div>
-        <div class="field">
-          <label for="message"></label>
-          <input required placeholder="Mensaje" type="text" name="message" id="message">
-        </div>
-        <div class="field">
-          <label for="email_id"></label>
-          <textarea aria-controls="none" placeholder="Mensaje" name="message" id="message"></textarea>
-        </div>
-        <p id="aviso">Asegurate que tu mail sea correcto antes de enviarlo</p>
       
-        <input type="submit" id="button" value="Enviar Email" >
-      </form>
+      <ul id="ul__nav-primario">
+        <div id="nav">
+          <li><a href="#top">Inicio <hr></a></li>
+          <li><a href="#introduccion-hr">Conocimientos <hr></a></li>
+          <li><a href="#form-span">Contacto <hr></a></li>
+        </div>
+        <!-- <div id="redes">
+          <li class="redes__li"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li class="redes__li"><a href="#"><i class="fa-brands fa-github"></i></a></li>
+        </div> -->
+      </ul>
+    </nav>
+
+    <div id="nav-secundario" style="left:-45%;">
+      <ul>
+        <li><a href="#top">Inicio <hr></a></li>
+        <li><a href="#introduccion-hr">Conocimientos <hr></a></li>
+        <li><a href="#form-span">Contacto <hr></a></li>
+      </ul>
     </div>
-    <script src="script.js"></script>
+    
+    <div id="portafolio">
+      
+      <div id="presentacion"> 
+        <h1><p id="p__presentacion">Hola, soy</p><b>F</b>elipe <b>F</b>errari</h1>
+        <div class="cont-perfil">
+<!--           <img id="pc-perfil" src="/imagenes/programming_6062646.png" alt="">
+          <img id="code-perfil" src="/imagenes/coding_1652216.png" alt=""> -->
+          <img id="perfil" src="/imagenes/imgperfil.webp" alt="Felipe Ferrari">
+        </div>
+        <p id="sobremi">Un desarrollador web principiante con conocimientos en <b>HTML</b>, <b>CSS</b> y un poco de <b>JavaScript</b>.<br> Me encargo de hacer tu página web, y estoy constantemente aprendiendo y mejorando mis habilidades en desarrollo web.</p>
+      </div>
+      
+      <a href="#introduccion-hr">
+        <div id="flecha">
+          <img id="introduccion-hr" src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://www.bdtrans.es/wp-content/uploads/home/scroll-arrow.gif" alt="Seguir bajando">
+        </div>
+      </a>
+
+      <hr class="separadores">
+
+      <p id="introduccion">Estos son algunos de mis conocimientos.</p>
+
+      <div id="tecnologias">
+        <div>
+          <img class="logo" src="/imagenes/html.png" alt="HTML">
+          <!-- <p>HTML es el lenguaje utilizado para crear y estructurar el contenido de una página web.</p> -->
+        </div>
+
+        <div>
+          <img class="logo" src="/imagenes/css.png" alt="CSS">
+          <!-- <p>CSS es un lenguaje utilizado para definir el estilo y la apariencia visual de una página web.</p> -->
+        </div>
+
+        <div>
+          <img class="logo" src="/imagenes/git.png" alt="git">
+          <!-- <p>Con Git, podés guardar y mantener un registro completo de todas las modificaciones realizadas en el código.</p> -->
+        </div>
+
+        <div>
+          <img class="logo" src="/imagenes/javaScript.png" alt="JS">
+          <!-- <p>JavaScript es un lenguaje de programación que se utiliza para agregar interactividad y funcionalidad a una página web.</p> -->
+        </div>
+      </div>
+
+      <hr>
+
+      <h2>ESTOS SON ALGUNOS DE LOS PROYECTOS QUE ESTOY REALIZANDO CON LA AYUDA DE LAS TECNOLOGÍAS QUE MOSTRÉ ANTERIORMENTE</h2>
+
+      <div class="galeria">
+
+        <div class="imagen">
+          <img src="/imagenes/Juegos.png" alt="">
+          <div class="overlay">
+            <a href="/Enlaces/Fe1.4/index.html"><i class="fa-solid fa-link"></i></a>
+            <div id="mostrar-info" class="ocultar">
+              <img class="img__mostrar-info img-1" src="/imagenes/flechaArriba.png" alt="">
+              <p>Una página que trata sobre videojuegos, responsiva y atractiva.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="/imagenes/moviesff.png" alt="moviesff">
+          <div class="overlay">
+            <a href="https://moviesff.netlify.app/"><i class="fa-solid fa-link"></i></a>
+            <div id="mostrar-info" class="ocultar">
+              <img class="img__mostrar-info img-2" src="/imagenes/flechaArriba.png" alt="">
+              <p>vas a poder ver resultados de peliculas populares e informacion de cada una de ellas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="imagen">
+          <img src="/imagenes/coffee.png" alt="">
+          <div class="overlay">
+            <a href="https://coffeexperience.netlify.app/"><i class="fa-solid fa-link"></i></a>
+            <div id="mostrar-info" class="ocultar">
+              <img class="img__mostrar-info img-3" src="/imagenes/flechaArriba.png" alt="">
+              <p>Una página de una pastelería ficticia con muchas interactividades e imagenes para exponer en carruseles y más.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="form-span"></div>
+
+      <div id="contactar">
+
+        <div id="datos">
+          <h3>Mis datos de contacto</h3>
+          <ul id="datos__ul">
+            <div>
+              <i class="fa-solid fa-user"></i><li>Nombre <p>Felipe Ferrari</p></li>
+            </div>
+            <div>
+              <i class="fa-sharp fa-solid fa-location-dot"></i><li>Ubicación <p>Luján - Buenos Aires</p></li>
+            </div>
+            <div>
+              <i class="fa-solid fa-envelope"></i><li>Email <p>felipeferrari285@gmail.com</p></li>
+            </div>
+            <div>
+              <i class="fa-solid fa-phone"></i><li>Número <p>+54 11 6860-5342</p></li>
+            </div>
+          </ul>
+        </div>
+      
+        <form id="form">
+          <h3>También podés enviarme un mail llenando este formulario</h3>
+          <div class="field">
+            <label  for="from_name"></label>
+            <input required placeholder="Tu nombre" type="text" name="from_name" id="from_name">
+          </div>
+          <div class="field">
+            <label for="message"></label>
+            <div id="email-adv"><input required placeholder="Mail" type="email" name="email_id" id="email_id"></div>
+          </div>
+          <div class="field">
+            <label for="email_id"></label>
+            <textarea maxlength="380" aria-controls="none" placeholder="Mensaje" name="message" id="message"></textarea>
+          </div>
+          
+          <input type="submit" id="button" value="Enviar Email" >
+        </form>
+
+        <div id="toast"></div>
+
+    <script src="toast.js"></script>
+    <script src="pag/script.js"></script>
     <script src="https://kit.fontawesome.com/fe6ac2c5e5.js" crossorigin="anonymous"></script>
-    <script src="particles.js-master/particles.js"></script>
-    <script src="particles.js-master/demo/js/app.js"></script>
 </body>
 </html>
