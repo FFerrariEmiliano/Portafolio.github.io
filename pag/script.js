@@ -111,25 +111,60 @@ const inputNombre = document.getElementById("from_name")
 const inputMensaje = document.getElementById("message")
 const inputEmail = document.getElementById("email_id")
 
+const toastCont = document.getElementById("toast")
+function addNotification(state, message) {
+  const fragment = document.createDocumentFragment()
+  const notifToast = document.createElement("div")
+  notifToast.setAttribute("id", `${toastCont.children.length}-num`)
+  notifToast.classList.add("toast-element")
+  notifToast.classList.add("st" + state)
+  const toastMsg = document.createElement("p")
+  toastMsg.textContent = message
+  const noShowBar = document.createElement("span")
+  noShowBar.classList.add("loadtoast")
+  const closeToast = document.createElement("span")
+  closeToast.classList.add("close-toast")
+  closeToast.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+  
+  notifToast.appendChild(closeToast)
+  notifToast.appendChild(noShowBar)
+  notifToast.appendChild(toastMsg)
+  fragment.appendChild(notifToast)
+  toastCont.appendChild(fragment)
+  let value = 0
+  const loadtoast = setInterval(() => {
+    value += .125
+    noShowBar.style.width = `${value}%`
+    if (noShowBar.offsetWidth >= notifToast.offsetWidth) {
+      notifToast.classList.add("hidetoast")
+      clearInterval(loadtoast)
+    }
+  }, 1);
+  closeToast.addEventListener("click", ()=>{
+    notifToast.classList.add("hidetoast")
+    clearInterval(loadtoast)
+  })
+}
 document.getElementById('form').addEventListener('submit', function(event) {
-   event.preventDefault();
-
-   btn.value = 'Enviando...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_kv1mzke';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      inputNombre.value = ""
-      inputMensaje.value = ""
-      inputEmail.value = ""
-      btn.value = 'Enviar Email';
-      alert('El Email fue enviado con exito');
-    }, (err) => {
-      btn.value = 'Enviar  Email';
-      alert(JSON.stringify(err));
-    });
+  event.preventDefault();
+  
+  addNotification(1, "tu mail se está enviando...")
+  btn.value = 'Enviando...';
+  
+  const serviceID = 'default_service';
+  const templateID = 'template_kv1mzke';
+  
+  emailjs.sendForm(serviceID, templateID, this)
+  .then(() => {
+    inputNombre.value = ""
+    inputMensaje.value = ""
+    inputEmail.value = ""
+    btn.value = 'Enviar Email';
+    addNotification(2, "tu mail fue enviado con éxito")  
+  }, (err) => {
+    btn.value = 'Enviar  Email';
+    addNotification(0, "hubo un error al enviar tu mail")  
+  });
 });
 
 // fin validar formulario

@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="pag/styles.css">
   <link rel="stylesheet" href="pag/menu-de-barras.css">
   <link rel="stylesheet" href="pag/overlay.css">
+  <link rel="stylesheet" href="toast.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
   <script type="text/javascript">
   emailjs.init('wOz-WlR4JzhWj2kYD')
@@ -30,10 +31,10 @@
           <li><a href="#introduccion-hr">Conocimientos <hr></a></li>
           <li><a href="#form-span">Contacto <hr></a></li>
         </div>
-        <div id="redes">
+        <!-- <div id="redes">
           <li class="redes__li"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
           <li class="redes__li"><a href="#"><i class="fa-brands fa-github"></i></a></li>
-        </div>
+        </div> -->
       </ul>
     </nav>
 
@@ -151,7 +152,6 @@
             </div>
           </ul>
         </div>
-
       
         <form id="form">
           <h3>También podés enviarme un mail llenando este formulario</h3>
@@ -170,6 +170,10 @@
           
           <input type="submit" id="button" value="Enviar Email" >
         </form>
+
+        <div id="toast"></div>
+
+    <script src="toast.js"></script>
     <script src="pag/script.js"></script>
     <script src="https://kit.fontawesome.com/fe6ac2c5e5.js" crossorigin="anonymous"></script>
 </body>
